@@ -1,24 +1,19 @@
-import {useEffect, useState} from 'react'
 import './css/main.css';
-import ProjectCard from './components/ProjectCard';
-import { fetchAllProjects } from './utils/sanity/services/projectService';
+import Projects from './components/Projects';
+import { Route, Routes } from 'react-router-dom';
+import Project from './components/Project';
 
 function App() {
-  const [projects, setProjects] = useState();
-
-  const getAllProjects = async () => {
-    const allProjects = await fetchAllProjects();
-    setProjects(allProjects);
-  }
-
-  useEffect(() => {
-    getAllProjects();
-  }, [])
+  
 
   return (
-    <main>
-      {projects?.map((project) => <ProjectCard key={project._id} project={project} />)}
-    </main>
+    <Routes>
+      <Route index element={<Projects />} />
+      <Route path="/prosjekter">
+        <Route index element={<Projects />} />
+        <Route path=":slug" element={Project} />
+      </Route>
+    </Routes>
   );
 }
 

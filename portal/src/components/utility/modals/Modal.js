@@ -2,6 +2,7 @@ import * as React from "react"
 import Dialog from "@mui/material/Dialog"
 import DialogTitle from "@mui/material/DialogTitle"
 import CloseIcon from "@mui/icons-material/Close"
+import { red } from '@mui/material/colors';
 
 const callAll = (...fns) => (...args) => fns.forEach(fn => fn && fn(...args))
 
@@ -40,7 +41,7 @@ function ModalContents({ title, children, ...props }) {
       <div style={{ padding: "20px" }}>
         <div css={{ display: "flex", justifyContent: "flex-end" }}>
           <ModalDismissButton>
-            <CloseIcon></CloseIcon>
+            <CloseIcon sx={{color: red[400]}}></CloseIcon>
           </ModalDismissButton>
         </div>
         <DialogTitle>{title}</DialogTitle>

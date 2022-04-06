@@ -12,10 +12,43 @@
   --lightgray: var(--lightgrey) ;
 }
 
+main {
+  width: 100%;
+  max-width: 1400px;
+  margin: 1rem auto;
+}
+
+.cardFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cardFlex article, .cardFlex div {
+  max-width: 30%;
+  margin-bottom: 1rem;
+}
+
 .card {
   border: 1px solid var(--blue);
   background: var(--lightgrey);
   padding: 1rem;
+}
+
+dl.tablelist dd, dl.tablelist dt {
+  display: block;
+  float: left;
+}
+dl.tablelist dt {
+  clear: both;
+  min-width: 115px;
+}
+
+.projectCard h3 small {
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: block;
+  clear: both;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,11 @@
+.cardFlex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    article, div {
+        max-width: 30%;
+        margin-bottom: 1rem;
+    }
+}

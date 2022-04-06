@@ -1,7 +1,7 @@
 import client from "../client";
 
 export const fetchAllProjects = async () => {
-    const projects = client.fetch(`*[_type == "project"]{..., customer->}`)
+    const projects = client.fetch(`*[_type == "project"]{_id, title, description, "slug": slug.current, "customer": customer->}`)
     return projects
 }
 
