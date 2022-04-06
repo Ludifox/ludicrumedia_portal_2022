@@ -1,0 +1,21 @@
+/* MAIN CSS FILE */
+:root {
+  --black: #232323;
+  --white: #fff;
+  --blue: #349193;
+  --purple: #48083B;
+  --yellow: #FBD406;
+  --skyblue: #CBEAEB;
+  --sky: var(--skyblue);
+  --orange: #F15F42;
+  --lightgrey: #F3F3F3;
+  --lightgray: var(--lightgrey) ;
+}
+
+.card {
+  border: 1px solid var(--blue);
+  background: var(--lightgrey);
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */
