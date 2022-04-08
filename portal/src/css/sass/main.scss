@@ -19,6 +19,12 @@ main {
     margin: 1rem auto;
 }
 
+div, article, ul, ol, span, section, aside {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 //Import structurals
 @import 'structural/flexgrid.scss';
 @import 'structural/card.scss';

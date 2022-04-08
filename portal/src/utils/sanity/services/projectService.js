@@ -6,6 +6,6 @@ export const fetchAllProjects = async () => {
 }
 
 export const fetchProject = async (slug) => {
-    const project = client.fetch(`*[_type == "project" && slug == $slug]{..., customer->}`,{slug})
-    return project?.[0]
+    const project = client.fetch(`*[_type == "project" && slug.current == $slug]{title}`,{slug});
+    return project
 }

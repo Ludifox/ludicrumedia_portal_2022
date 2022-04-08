@@ -9,9 +9,9 @@ function App() {
   return (
     <Routes>
       <Route index element={<Projects />} />
-      <Route path="/prosjekter">
+      <Route path="prosjekter">
         <Route index element={<Projects />} />
-        <Route path=":slug" element={Project} />
+        <Route path=":slug" element={<Project />} />
       </Route>
     </Routes>
   );

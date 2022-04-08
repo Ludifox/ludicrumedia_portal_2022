@@ -18,6 +18,12 @@ main {
   margin: 1rem auto;
 }
 
+div, article, ul, ol, span, section, aside {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .cardFlex {
   display: flex;
   flex-direction: row;
@@ -25,7 +31,7 @@ main {
   justify-content: space-between;
 }
 .cardFlex article, .cardFlex div {
-  max-width: 30%;
+  width: calc(33% - 0.5rem);
   margin-bottom: 1rem;
 }
 
@@ -41,7 +47,7 @@ dl.tablelist dd, dl.tablelist dt {
 }
 dl.tablelist dt {
   clear: both;
-  min-width: 115px;
+  min-width: 65px;
 }
 
 .projectCard h3 small {

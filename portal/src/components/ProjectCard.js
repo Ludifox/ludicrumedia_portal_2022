@@ -2,6 +2,7 @@ import MoreTimeIcon from "@mui/icons-material/MoreTime";
 import BadgeIcon from "@mui/icons-material/Badge";
 import { IconButton, Tooltip} from "@mui/material";
 import { Modal, ModalContents, ModalOpenButton } from "./utility/modals/Modal";
+import CustomerInfo from "./utility/CustomerInfo";
 
 export default function ProjectCard({project}) {
     return(
@@ -16,27 +17,17 @@ export default function ProjectCard({project}) {
                 </IconButton>
             </Tooltip>
             <Modal>
-        <ModalOpenButton>
-            <Tooltip title="Se kundeinformasjon" arrow placement="top">
-                <IconButton variant="contained">
-                    <BadgeIcon color="action" />
-                </IconButton>
-            </Tooltip>
-        </ModalOpenButton>
-        <ModalContents>
-           <h3>{project.customer.clientname}</h3>
-           <dl className="tablelist">
-               <dt>Org.nr.:</dt>
-               <dd>{project.customer.clientid}</dd>
-               <dt>Kontaktperson:</dt>
-               <dd>{project.customer.contact}</dd>
-               <dt>Telefon:</dt>
-               <dd>{project.customer.phone}</dd>
-               <dt>Email:</dt>
-               <dd>{project.customer.email}</dd>
-           </dl>
-        </ModalContents>
-        </Modal>
+                <ModalOpenButton>
+                    <Tooltip title="Se kundeinformasjon" arrow placement="top">
+                        <IconButton variant="contained">
+                            <BadgeIcon color="action" />
+                        </IconButton>
+                    </Tooltip>
+                </ModalOpenButton>
+                <ModalContents>
+                    <CustomerInfo customer={project.customer} />
+                </ModalContents>
+            </Modal>
             </div>
         </article>
         </>

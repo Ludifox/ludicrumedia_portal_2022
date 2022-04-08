@@ -12,6 +12,7 @@ export default {
             name: "slug",
             type: "slug",
             title: "Permalenke",
+            description: "Typisk kunde-prosjektnavn",
             options: {
                 source: 'title',
                 maxLength: 200, // will be ignored if slugify is set
