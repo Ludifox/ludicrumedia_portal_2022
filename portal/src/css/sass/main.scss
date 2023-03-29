@@ -12,11 +12,21 @@
     --lightgrey: #F3F3F3;
     --lightgray: var(--lightgrey)
 }
-
+#portal {
+    header {
+        background: var(--purple);
+        color: var (--lightgray);
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 main {
     width: 100%;
     max-width: 1400px;
     margin: 1rem auto;
+
 }
 
 div, article, ul, ol, span, section, aside {

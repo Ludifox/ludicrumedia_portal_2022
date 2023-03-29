@@ -2,15 +2,16 @@
 The new Ludicrumedia is made with react, sanity and sass. To install run project for development, do as follows:
 - clone/fork the repository to your computer
 - open folder in VSCode
-- in terminal, cd into folder "portal" and run `npm run css:compile` (builds CSS file required by App.js)
-- in new terminal, cd into folder "studio" and run `sanity start` (requires access to sanity project as collaborator)
 - in new terminal, cd into folder "portal" and run `npm install` (skip this step after first setup/run)
-- after installation, in terminal, run `npm start`
+- run `npm run css:compile` (builds CSS file required by App.js)
+- in new terminal, cd into folder "studio" and run `npm install` (requires access to sanity project as collaborator)
+- run `npm run dev` (stars Sanity Studio in dev mode)
+- after installation, in first terminal (in the portal folder), run `npm start`
 
 The project is running on http://localhost:3000. The database admin studio is running on http://localhost:3333.
 
 # Material UI
-The projects uses components from [Material UI v5](https://mui.com/getting-started/usage/). It also has [Material Icons](https://mui.com/components/material-icons/) installed for icon use.
+The projects uses components from [Material UI v5](https://mui.com/getting-started/usage/). It also has [Material Icons](https://mui.com/components/material-icons/) installed for icon use. For datepickers, [day.js](https://day.js.org/) is used as date handler.
 
 # Custom components
 The project has some readily made custom components:
@@ -23,7 +24,7 @@ Built around Material UIs Dialog, a multiple modal handler is built utilizing co
         <button>open modal</button>
     </ModalOpenButton>
     <ModalContents>
-        <p>{project.customer.clientname}</p>
+        <p>{YOUR_CONTENT}</p>
     </ModalContents>
 </Modal>
 ```

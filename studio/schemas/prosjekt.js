@@ -33,6 +33,12 @@ export default {
             title: "Kunde",
             to: {type: "customer"}
         },
+        {
+            name: "worklog",
+            title: "Arbeidslogg",
+            type: "array",
+            of: [{type: "arbeidstimer"}]
+        }
     ],
     preview: {
         select: {

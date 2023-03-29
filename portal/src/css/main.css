@@ -12,6 +12,15 @@
   --lightgray: var(--lightgrey) ;
 }
 
+#portal header {
+  background: var(--purple);
+  color: var --lightgray;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 main {
   width: 100%;
   max-width: 1400px;
@@ -55,6 +64,10 @@ dl.tablelist dt {
   font-size: 0.9rem;
   display: block;
   clear: both;
+}
+
+#project {
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
